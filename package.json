@@ -1,0 +1,7 @@
+{
+  "lockfileVersion": 1,
+  "dependencies": {
+    "@iota/core": "^1.0.0-beta.6",
+    "iota.lib.js": "^0.5.1"
+  }
+}
