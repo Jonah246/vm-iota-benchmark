@@ -48,15 +48,17 @@ def sendBundleTransaction(to_adr, msg_data, value):
 
     for i in range(5):
         data_arr.append(data_arr[i])
-
+    #print('sending : ', len(data_arr))
+        
     headers = {'Content-type': 'application/x-www-form-urlencoded'}
     req =  requests.post(url, data=json.dumps(data_arr), headers=headers)
     return req
 
 
 rq = []
+#print('sending %d package each of the package contains 10 tx'%(int(sys.argv[1])))
 for i in range(int(sys.argv[1])):
     rq = sendBundleTransaction('0x70AEc4B9CFFA7b55C0711b82DD719049d615E21d', '', 100)
     #rq = (sendTransaction('0xEd2106819C0416b6CE86d70c9B6d7F3e9DdbC530', '0x70AEc4B9CFFA7b55C0711b82DD719049d615E21d', '', 100))
 
-print(rq)
+#print(rq)
